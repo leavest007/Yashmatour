@@ -24,9 +24,9 @@
                 <div class="row">
                     <div class="col-lg-8 pl-lg-0">
                         <div class="card card-details">
-                            <h1>Nusa Penida</h1>
+                            <h1>{{ $item->title }}</h1>
                             <p>
-                                Republic of Indonesia Raya
+                                {{ $item->location }}
                             </p>
                             <div class="gallery">
                                 <div class="xzoom-container">

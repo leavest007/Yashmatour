@@ -25,7 +25,7 @@
                     @method('PUT')
                     @csrf
                     <div class="form-group">
-                        <label for="title">Paket Travel</label>
+                        <label for="travel_packages_id">Paket Travel</label>
                         <select name="travel_packages_id" required class="form-control">
                         <option value="{{ $item->travel_packages_id }}">Jangan Diubah</option>
                             @foreach ($travel_packages as $travel_package)

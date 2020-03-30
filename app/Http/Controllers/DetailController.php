@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use app\TravelPackage;
+use App\TravelPackage;
 use Illuminate\Http\Request;
 
 class DetailController extends Controller

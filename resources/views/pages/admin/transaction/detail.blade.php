@@ -36,7 +36,7 @@
                     </tr>
                     <tr>
                         <th>Additional Visa</th>
-                        <td>${{ $item->Additional_visa }}</td>
+                        <td>${{ $item->additional_visa }}</td>
                     </tr>
                     <tr>
                         <th>Total Transaksi</th>

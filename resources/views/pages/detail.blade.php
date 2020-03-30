@@ -51,7 +51,7 @@
                             </div>
                             @endif
                             <h2>Tentang Wisata</h2>
-                            {!! $item->about !!}
+                            <p>{!! $item->about !!}</p>
                             <div class="features row">
                                 <div class="col-md-4">
                                     <img 
@@ -64,6 +64,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-4 border-left">
+                                    <div class="description">
                                     <img 
                                     src="{{url('frontend/images/Bahasa.png')}}" 
                                     alt="" 
@@ -72,17 +73,20 @@
                                         <h3>Languange</h3>
                                         <p>{{ $item->language}}</p>
                                     </div>
-                                </div>
+                                    </div>
+                                </div>    
                                 <div class="col-md-4 border-left">
+                                    <div class="description">
                                     <img 
-                                    src="{{url('frontend/images/Bahasa.png')}}" 
+                                    src="{{url('frontend/images/Makanan.png')}}" 
                                     alt="" 
                                     class="features-image">
                                     <div class="description">
                                         <h3>Foods</h3>
                                         <p>{{ $item->foods }}</p>
                                     </div>
-                                </div>
+                                    </div>
+                                </div>    
                             </div>
                         </div>
                     </div>
@@ -90,11 +94,11 @@
                         <div class="card card-details card-right">
                             <h2>Members are going</h2>
                             <div class="members my-2">
-                                <img src="frontend/images/member-1.png" alt="" class="member-image mr-1">
-                                <img src="frontend/images/member-2.png" alt="" class="member-image mr-1">
-                                <img src="frontend/images/member-3.png" alt="" class="member-image mr-1">
-                                <img src="frontend/images/member-4.png" alt="" class="member-image mr-1">
-                                <img src="frontend/images/member-5.png" alt="" class="member-image mr-1">
+                                <img src="/frontend/images/member-1.png" alt="" class="member-image mr-1">
+                                <img src="/frontend/images/member-2.png" alt="" class="member-image mr-1">
+                                <img src="/frontend/images/member-3.png" alt="" class="member-image mr-1">
+                                <img src="/frontend/images/member-4.png" alt="" class="member-image mr-1">
+                                <img src="/frontend/images/member-5.png" alt="" class="member-image mr-1">
                             </div>
                             <hr>
                             <h2>Trip Informations</h2>
@@ -113,13 +117,14 @@
                                 </tr>
                                 <tr>
                                     <th width="50%">Price</th>
-                                    <td width="50%" class="text-right">${{ $item->price }} / person</td>
+                                    <td width="50%" class="text-right">${{ $item->price }},00 / person</td>
                                 </tr>
                             </table>
                         </div>
                         <div class="join-container">
                            @auth
-                            <form action="{{ route('checkout_process', $item->id )}}" method="POST">
+                            <form action="{{ route('checkout-process', $item->id )}}" method="POST">
+                                @csrf
                                    <button class="btn btn-block btn-join-now mt-3 py-2" type="submit">
                                        Join Now
                                    </button>

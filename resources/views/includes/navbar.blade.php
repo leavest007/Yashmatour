@@ -1,8 +1,8 @@
   <!-- Navbar -->
     <div class="container">
         <nav class="row navbar navbar-expand-lg navbar-light bg-white">
-            <a href="#" class="navbar-brand">
-                <img src="frontend/images/Logo.png" alt="Logo NMADS" class="">
+            <a href="{{'/'}}" class="navbar-brand">
+                <img src="{{ url('frontend/images/Logo.png')}}" alt="Logo NMADS" class="">
             </a>
             <button 
                 class="navbar-toggler navbar-toggler-right" 

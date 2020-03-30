@@ -20,7 +20,7 @@ Route::get('/detail/{slug}', 'DetailController@index')
     ->name('detail');
 
 Route::post('/checkout/{id}', 'CheckoutController@process')
-    ->name('checkout_process')
+    ->name('checkout-process')
     ->middleware(['auth', 'verified']);
 
 Route::get('/checkout/{id}', 'CheckoutController@index')
